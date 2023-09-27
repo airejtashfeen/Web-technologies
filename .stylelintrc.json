@@ -1,0 +1,32 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": 2,
+        "selector-list-comma-newline-after": "always",
+        "declaration-block-trailing-semicolon": "always",
+        "declaration-colon-space-before": "never",
+        "declaration-colon-space-after": "always-single-line",
+        "string-quotes": "double",
+        "order/properties-order": [
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "flex",
+        "grid",
+        "padding",
+        "margin",
+        "border",
+        "background",
+        "color",
+        "font"
+        ],
+        "color-hex-case": "lower",
+        "color-hex-length": "short",
+        "unit-whitelist": ["em", "rem", "px", "%", "s", "vh", "vw"]
+    }
+    }
+    

@@ -1,0 +1,17 @@
+.h1span{
+    color: rgb(7, 7, 132);
+}
+
+.container{
+    display: flex;
+    background-color: blue;
+    /* flex-direction: column;
+    flex-direction: column-reverse; 
+    flex-direction: row-reverse; */
+
+}
+.container > div{
+    margin: 15px;
+    background-color: white;
+    padding: 15px;
+}
