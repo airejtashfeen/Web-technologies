@@ -1,0 +1,26 @@
+.firstDiv{
+    background-color: #1dc67f;
+    width: 100px;
+    padding-left: 40px;
+}
+
+.thirdDiv{
+    background-color: #1dc67f;
+    width: 100px;
+    padding-left: 40px;
+    margin-left: 100px;
+}
+
+.secondDiv{
+    padding-left: 40px;
+    margin-left: 40px;
+    margin-right: -60px;
+    border: 8px solid black;
+    height:20px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}

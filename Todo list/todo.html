@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+   <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+    <input type="text" id="newtodo">
+    <button id="btnadd">Add New Todo</button> 
+    <ul id="todos">
+        <li>Make Coffee <button onclick="handleDelete(event)">Delete</button></li>
+        <li>Buy Milk <button onclick="handleDelete(event)">Delete</button></li>
+        <li>Feed the Cat <button onclick="handleDelete(event)">Delete</button></li>
+    </ul>
+</div>
+</body>
+<script src="todo.js"></script>
+</html>
