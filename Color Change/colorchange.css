@@ -1,11 +1,11 @@
 .firstDiv{
-    background-color: #1dc67f;
+    background-color: steelblue;
     width: 100px;
     padding-left: 40px;
 }
 
 .thirdDiv{
-    background-color: #1dc67f;
+    background-color:  steelblue;
     width: 100px;
     padding-left: 40px;
     margin-left: 100px;
@@ -17,10 +17,15 @@
     margin-right: -60px;
     border: 8px solid black;
     height:20px;
+    background-color: red;
 }
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80vh;
+}
+
+#mybtn{
+    margin: 50px;
 }
