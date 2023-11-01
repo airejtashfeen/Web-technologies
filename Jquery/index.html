@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<input type="text" id="newtodo">
+<button id="btnadd">Add</button>
+<ul id="todos"></ul>
+
+<script>
+    $(document).ready(function () {
+        $('#btnadd').click(handleAdd);
+
+        function handleAdd() {
+            let x = $('#newtodo').val();
+            let listItem = $('<li>').text(x);
+
+            let deleteButton = $('<button>').text("Delete");
+            deleteButton.click(handleDelete);
+            listItem.append(deleteButton);
+
+            $('#todos').append(listItem);
+
+            $('#newtodo').val('');
+        }
+
+        function handleDelete() {
+            $(this).parent().remove();
+        }
+    });
+</script>
+
+</body>
+</html>

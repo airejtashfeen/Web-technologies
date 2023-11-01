@@ -1,0 +1,56 @@
+body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 45%;
+  border: 5px solid skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  color: skyblue;
+}
+
+.line {
+  height: 10px;
+  width: 200px;
+  border-top: 5px solid skyblue;
+  border-bottom: 5px solid skyblue;
+}
+
+.done-c {
+  border: 5px solid blue;
+  color: blue;
+}
+
+.done-l {
+  border-top: 5px solid blue;
+  border-bottom: 5px solid blue;
+}
+
+.btns {
+  position: absolute;
+  top: 480px;
+}
+
+button {
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#back {
+  background-color: skyblue;
+}
+
+#next {
+  background-color: blue;
+}
