@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
-  <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
-    <div class="container">
-    <input type="text" id="newtodo">
-    <button id="btnadd">Add New Todo</button> 
-    <ul id="todos">
-        <li>Make Coffee <button onclick="handleDelete(event)">Delete</button></li>
-        <li>Buy Milk <button onclick="handleDelete(event)">Delete</button></li>
-        <li>Feed the Cat <button onclick="handleDelete(event)">Delete</button></li>
+    <div class="container my-5">
+    <input type="text" id="newtodo" class="form-control mb-2">
+    <button id="btnadd" class="btn btn-primary mb-2">Add New Todo</button> 
+    <ul id="todos" class="list-group">
+        <li >Make Coffee <button class="btn btn-danger" onclick="handleDelete(event)">Delete</button></li>
+        <li>Buy Milk <button class="btn btn-danger" onclick="handleDelete(event)">Delete</button></li>
+        <li>Feed the Cat <button class= "btn btn-danger " onclick="handleDelete(event)">Delete</button></li>
     </ul>
 </div>
 </body>

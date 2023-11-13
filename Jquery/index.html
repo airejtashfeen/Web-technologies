@@ -3,35 +3,39 @@
 <head>
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
 </head>
 
 <body>
 
 <input type="text" id="newtodo">
-<button id="btnadd">Add</button>
+<button id="btnadd" class="btn-primary">Add</button>
+<br>
 <ul id="todos"></ul>
 
 <script>
-    $(document).ready(function () {
-        $('#btnadd').click(handleAdd);
+    $(function(){
+        $("#btnadd").click(addListItem)
+    })
 
-        function handleAdd() {
-            let x = $('#newtodo').val();
-            let listItem = $('<li>').text(x);
+    function addListItem(){
+        let todoitem= $("#newtodo").val();
+        $("#todos").append("<li>"+ todoitem + "</li>");
+        let deleteButton= document.createElement("button");
+        deleteButton.textContent="Delete";
+        deleteButton.className="btn btn-danger";
+        todos.append(deleteButton);
+        deleteButton.onclick= deleteItem;
+        
+    }   
 
-            let deleteButton = $('<button>').text("Delete");
-            deleteButton.click(handleDelete);
-            listItem.append(deleteButton);
-
-            $('#todos').append(listItem);
-
-            $('#newtodo').val('');
-        }
-
-        function handleDelete() {
-            $(this).parent().remove();
-        }
-    });
+    function deleteItem(e){
+       let tag= e.target;
+       let li= tag.parentNode;
+       let ul= li.parentNode;
+       ul.removeChild(li);
+    }
 </script>
 
 </body>

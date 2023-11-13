@@ -9,6 +9,7 @@ function handleAdd() {
 
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
+    deleteButton.className= "btn btn-warning";
     deleteButton.onclick = handleDelete; 
     listItem.appendChild(deleteButton);
 
