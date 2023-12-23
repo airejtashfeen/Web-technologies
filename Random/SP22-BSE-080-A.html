@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe CRUD</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function () {
+            // Fetch recipes
+            function fetchRecipes() {
+                $.ajax({
+                    url: "https://usman-fake-api.herokuapp.com/api/recipes",
+                    method: "GET",
+                    success: function (data) {
+                        console.log("Recipes:", data);
+                    },
+                    error: function (error) {
+                        console.log("Error fetching data:", error);
+                    }
+                });
+            }
+
+            // Create a new recipe
+            function createRecipe() {
+                var newRecipe = {
+                    title: "New Recipe",
+                    description: "This is a new recipe.",
+                    body: "This is the body of the recipe."
+                };
+
+                $.ajax({
+                    url: "https://usman-fake-api.herokuapp.com/api/recipes",
+                    method: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(newRecipe),
+                    success: function (data) {
+                        console.log("Recipe created:", data);
+                        fetchRecipes(); 
+                    },
+                    error: function (error) {
+                        console.log("Error creating recipe:", error);
+                    }
+                });
+            }
+
+            // Update a recipe
+            function updateRecipe() {
+                var updatedRecipe = {
+                    title: "Updated Recipe",
+                    description: "This recipe has been updated successfully.",
+                    body: "Updated recipe body is here."
+                };
+
+                $.ajax({
+                    url: "https://usman-fake-api.herokuapp.com/api/recipes/65633ca01b11b3001493ed17",
+                    method: "PUT",
+                    contentType: "application/json",
+                    data: JSON.stringify(updatedRecipe),
+                    success: function (data) {
+                        console.log("Recipe updated successfully:", data);
+                        fetchRecipes(); // Refresh the recipe list after update
+                    },
+                    error: function (error) {
+                        console.log("Error updating the recipe:", error);
+                    }
+                });
+            }
+
+            // Delete a recipe
+            function deleteRecipe() {
+                $.ajax({
+                    url: "https://usman-fake-api.herokuapp.com/api/recipes/65633ca01b11b3001493ed1b",
+                    method: "DELETE",
+                    success: function (data) {
+                        console.log("Recipe successfully deleted:", data);
+                        fetchRecipes(); 
+                    },
+                    error: function (error) {
+                        console.log("Error deleting the recipe:", error);
+                    }
+                });
+            }
+
+            fetchRecipes(); // Fetch and display recipes on page load
+            //deleteRecipe();
+            //updateRecipe();
+            //createRecipe();
+        });
+    </script>
+
+</body>
+</html>

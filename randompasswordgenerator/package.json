@@ -1,0 +1,14 @@
+{
+  "name": "@airejtashfeen/randompasswordgenerator",
+  "version": "1.0.0",
+  "description": "Creates a random password combining characters, numbers and special characters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "airejtashfeen",
+  "license": "ISC",
+  "dependencies": {
+    "@airejtashfeen/randompasswordgenerator": "^1.0.0"
+  }
+}
