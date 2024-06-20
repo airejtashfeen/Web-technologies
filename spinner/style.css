@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.spinner {
+    height: 40px;
+    width: 40px;
+    border: 7px solid;
+    border-radius: 100%;
+    border-color: red black black black;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(365deg);
+    }
+}
+
+.textForSpinner {
+    margin-bottom: 20px; 
+    font-family: 'Impact';
+    color: rgb(10, 112, 100);
+    font-size: 25px;
+}

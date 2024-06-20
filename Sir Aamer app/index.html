@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>API Test</h1>
+  <div class="output"></div>
+</div>
+
+<script>
+  const apikey = '6ZtzwNWizYXIOCNrHA3R';
+  const username = 'aamergcu';
+  const password = '123456';
+
+  const url = `https://securepayments.live/secure/api/check-access/by-login-pass?_key=${apikey}&login=${username}&pass=${password}`;
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const outputDiv = document.querySelector('.output');
+      // Handle the data
+      outputDiv.innerHTML = `<p>User ID: ${data.user_id}</p>
+                             <p>Name: ${data.name}</p>
+                             <h2>Resources:</h2>`;
+      // Example: Accessing resources
+      data.resources.forEach(resource => {
+        outputDiv.innerHTML += `<p>${resource}</p>`;
+      });
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+</script>
+
+</body>
+</html>
